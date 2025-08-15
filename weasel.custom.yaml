@@ -1,102 +1,73 @@
-﻿# encoding: utf-8
-
-customization:
-  distribution_code_name: Weasel
-  distribution_version: 0.13.3
-  generator: "Weasel"
-  modified_time: "2023-06-09"
-  rime_version: "0.16.0"
-  config_version: "0.22"
-
 patch:
-  show_notifications_time: 200            # 部署通知、中英切换标识  显示时长 ms
-  style:
-    inline_preedit: true
-    color_scheme: MacRoseo                 # 匹配正文的颜色方案，对应正文的颜色方案名
-    display_tray_icon: false
-    horizontal: true                        # 横向排列候选
-    font_point: 13                          # 候选词 字号
-    font_face: "Microsoft Yahei"            # 字体 - 候选文字 例子： "Microsoft Yahei:12:15:bold"
-    label_font_face: "Microsoft Yahei"     # string    序号字体 标注
-    label_font_point: 12                   # number    序号字体 大小
-    comment_font_face: "Microsoft Yahei"   # string    注释字体
-    comment_font_point: 11                 # number    注释字体 大小
-    text_orientation: horizontal                         # horizontal | vertical
-    preedit_type: "composition"            #  "composition" | "preview" | "preview_all"
-
-    layout:
-      align_type: "bottom"        # string  "top" | "center" | "bottom" 序号、候选词、注释纵向对齐方式
-      corner_radius: 3            # number  圆角大小 候选面板
-      enhanced_position: false    # bool 允许光标位置获取失败时，在当空窗口左上角绘制候选框（而不是桌面左上角）
-      shadow_radius: 3
-      shadow_offset_x: 2          # number 阴影横向偏移量
-      shadow_offset_y: 2          # number 阴影纵向偏移量
-      border_width: 1             # number 边框宽度 候选边框、面板边框
-      candidate_spacing: 10       # number 候选之间的间隔
-      hilite_spacing: 3           # number 序号与候选词之间的间隔 宽度
-      hilite_padding: 0           # number 候选词边界值 宽度
-      margin_x: 9                 # number 内容离边框的，左右边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
-      margin_y: 5                 # number 内容离边框的，上下边界  当 margin_x 和 margin_y 设置为负值时，将不显示候选窗口，但不影响方案选择
-
-  preset_color_schemes:   # 主题：颜色方案
-    MacRoseo: # 玫红字体
-      name: 玫红 / MacRoseo
-      author: KyleBing
-      creat_time: "2021-07-26"
-      back_color: 0xFFFFFF
-      border_color: 0x33000000                     # color 面板边框颜色
-      text_color: 0x000000
-      candidate_text_color: 0x000000
-      comment_text_color: 0xBBCC27
-
-      label_color: 0x999999                        # color 序号颜色 未选中的
-      shadow_color:  0x44000000                    # color 面板阴影
-
-      nextpage_color:  0x000000                    # color
-      prevpage_color:  0x000000                    # color
-
-      candidate_back_color:  0xFFFFFF              # color 面板背景色
-      candidate_shadow_color:  0x00000000          # color 面板阴影颜色
-      candidate_border_color:  0x00000000          # color 面板边框颜色
-
-      hilited_shadow_color:  0xcccccc              # color 阴影颜色 选中的候选
-      hilited_text_color: 0x000000
-      hilited_back_color: 0xEDEDF9
-
-      hilited_label_color: 0x884F11FA              # color 序号颜色，选中的
-      hilited_candidate_text_color: 0x4F11FA       # color 文字颜色 选中的候选
-      hilited_candidate_back_color: 0x004F11FA     # color 背景色 选中的候选
-      hilited_candidate_shadow_color:  0x004F11FA  # color aarrggbb
-      hilited_candidate_border_color:  0x004F11FA  # color 边框颜色 选中的候选
-#      hilited_mark_color:  0xEDEDF9                # color 候选项前面的高亮颜色
-
-
-    MacRoseoAlt: # 玫红背景
-      name: MacRoseo
-      author: KyleBing
-      creat_time: "2021-07-26"
-      back_color: 0xFFFFFF
-      border_color: 0xD6D6D6
-      text_color: 0x000000
-      hilited_text_color: 0x000000
-      hilited_back_color: 0xFFFFFF
-      hilited_candidate_text_color: 0xFFFFFF
-      hilited_candidate_back_color: 0x4F11FA
-      candidate_text_color: 0x000000
-      comment_text_color: 0xBBCC27
-
-    WhiteAqua: # 水绿背景
-      name: WhiteAqua
-      author: KyleBing
-      creat_time: "2021-07-26"
-      back_color: 0xFFFFFF
-      border_color: 0xD6D6D6
-      text_color: 0x000000
-      hilited_text_color: 0x000000
-      hilited_back_color: 0xFFFFFF
-      hilited_candidate_text_color: 0xFFFFFF
-      hilited_candidate_back_color: 0x9BAD23
-      candidate_text_color: 0x000000
-      comment_text_color: 0xBBCC27
-
-  style/layout/border_width: 1
+  "style/color_scheme": mac_light               # 這項用於選中下面定義的新方案
+  "style/color_scheme": mac_dark               # 這項用於選中下面定義的新方案
+  "style/horizontal": true                     # 候选词横排显示
+  "style/layout/border_width": 0
+  "style/layout/min_width": 120
+  "style/layout/corner_radius": 5              # 候选框外窗口圆角半径
+  "style/layout/shadow_radius": 4              #全局阴影模糊半径，如果为0则全局禁用阴影
+  "style/layout/shadow_offset_x": 0            # 阴影x偏置，正向右负向左
+  "style/layout/shadow_offset_y": 0            # 阴影y偏置，如果x，y都是0,而shadow_radius不为0，则四周绘制阴影；否则drowshadow阴影
+  "style/font_point": 12
+  #"style/inline_preedit": true                 # 核心开关，强制将拼音显示在输入框内，而非悬浮候选窗
+  #"style/inline_preedit_color": 0x888888       # 拼音颜色（灰色）
+  #"style/text_orientation": horizontal         # 拼音横向排列
+  "preset_color_schemes/starcraft": # 在配色方案列表裏加入標識爲 starcraft 的新方案
+    name: 星際我爭霸／StarCraft
+    author: Contralisk <contralisk@gmail.com>, original artwork by Blizzard Entertainment
+    text_color: 0xccaa88             # 編碼行文字顏色，24位色值，用十六進制書寫方便些，順序是藍綠紅0xBBGGRR
+    candidate_text_color: 0x30bb55   # 候選項文字顏色，當與文字顏色不同時指定
+    back_color: 0x000000             # 底色
+    border_color: 0x1010a0           # 邊框顏色，與底色相同則爲無邊框的效果
+    hilited_text_color: 0xfecb96     # 高亮文字，即與當前高亮候選對應的那部份輸入碼
+    hilited_back_color: 0x000000     # 設定高亮文字的底色，可起到凸顯高亮部份的作用
+    hilited_candidate_text_color: 0x60ffa8  # 高亮候選項的文字顏色，要醒目！
+    hilited_candidate_back_color: 0x000000  # 高亮候選項的底色，若與背景色不同就會顯出光棒
+  "preset_color_schemes/mac_light": # 引用配置 https://simgv.com/2022/01/11/rime-skin/
+    name: Mac浅色
+    #horizontal: true             # true横排，false竖排
+    #candidate_format: "%c %@ "   # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
+    #corner_radius: 5                             # 窗口圆角
+    #hilited_corner_radius: 5                     # 高亮圆角
+    #line_spacing: 10                             # 行间距(适用于竖排)
+    #border_height: 4                             # 窗口上下高度，大于圆角半径才生效
+    #border_width: 4                              # 窗口左右宽度，大于圆角半径才生效
+    #font_face: "PingFangSC"                      # 候选词字体
+    #font_point: 16                               # 候选字大小
+    #label_font_point: 13                         # 候选编号大小
+    text_color: 0x424242                    # 拼音行文字颜色
+    back_color: 0xFFFFFF                    # 候选条背景色
+    border_color: 0xFFFFFF                  # 边框色
+    label_color: 0x999999                   # 预选栏编号颜色
+    candidate_text_color: 0x3c3c3c          # 预选项文字颜色
+    comment_text_color: 0x999999            # 拼音等提示文字颜色
+    hilited_text_color: 0x999999            # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0xD75A00            # 第一候选项背景背景色
+    hilited_candidate_text_color: 0xFFFFFF  # 第一候选项文字颜色
+    hilited_candidate_label_color: 0xFFFFFF # 第一候选项编号颜色
+    hilited_comment_text_color: 0x999999    # 注解文字高亮
+    shadow_color: 0x64AAAAAA                #阴影颜色
+  "preset_color_schemes/mac_dark":
+    name: Mac深色
+    #horizontal: true             # true横排，false竖排
+    #candidate_format: "%c %@ "   # 用 1/6 em 空格 U+2005 来控制编号 %c 和候选词 %@ 前后的空间
+    #corner_radius: 5                             # 窗口圆角
+    #hilited_corner_radius: 5                     # 高亮圆角
+    #line_spacing: 10                             # 行间距(适用于竖排)
+    #border_height: 4                             # 窗口上下高度，大于圆角半径才生效
+    #border_width: 4                              # 窗口左右宽度，大于圆角半径才生效 
+    #font_face: "PingFangSC"                      # 候选词字体
+    #font_point: 16                               # 候选字大小
+    #label_font_point: 13                         # 候选编号大小
+    text_color: 0x424242                    # 拼音行文字颜色
+    back_color: 0x252a2e                    # 候选条背景色
+    border_color: 0x050505                  # 边框色
+    label_color: 0x999999                   # 预选栏编号颜色
+    candidate_text_color: 0xe9e9ea          # 预选项文字颜色
+    comment_text_color: 0x999999            # 拼音等提示文字颜色
+    hilited_text_color: 0x999999            # 高亮拼音 (需要开启内嵌编码)
+    hilited_back_color: 0xD75A00            # 第一候选项背景背景色
+    hilited_candidate_text_color: 0xFFFFFF  # 第一候选项文字颜色
+    hilited_candidate_label_color: 0xFFFFFF # 第一候选项编号颜色
+    hilited_comment_text_color: 0x999999    # 注解文字高亮
+    shadow_color: 0x64000000                #阴影颜色
