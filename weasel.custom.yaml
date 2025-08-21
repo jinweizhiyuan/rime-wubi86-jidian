@@ -2,6 +2,12 @@ patch:
   "style/color_scheme": mac_light               # 這項用於選中下面定義的新方案
   "style/color_scheme": mac_dark               # 這項用於選中下面定義的新方案
   "style/horizontal": true                     # 候选词横排显示
+  "style/vertical_text": false
+  "style/fullscreen": false
+  #"style/layout/max_height": 30
+  #"style/layout/min_height": 30
+  "style/layout/margin_x": 0
+  "style/layout/margin_y": 0
   "style/layout/border_width": 0
   "style/layout/min_width": 120
   "style/layout/corner_radius": 5              # 候选框外窗口圆角半径
@@ -9,7 +15,8 @@ patch:
   "style/layout/shadow_offset_x": 0            # 阴影x偏置，正向右负向左
   "style/layout/shadow_offset_y": 0            # 阴影y偏置，如果x，y都是0,而shadow_radius不为0，则四周绘制阴影；否则drowshadow阴影
   "style/font_point": 12
-  #"style/inline_preedit": true                 # 核心开关，强制将拼音显示在输入框内，而非悬浮候选窗
+  "style/inline_preedit": true                 # 核心开关，强制将拼音显示在输入框内，而非悬浮候选窗
+  "style/preedit_type": composition
   #"style/inline_preedit_color": 0x888888       # 拼音颜色（灰色）
   #"style/text_orientation": horizontal         # 拼音横向排列
   "preset_color_schemes/starcraft": # 在配色方案列表裏加入標識爲 starcraft 的新方案
