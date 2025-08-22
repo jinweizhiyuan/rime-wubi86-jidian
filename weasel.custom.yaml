@@ -6,8 +6,9 @@ patch:
   "style/fullscreen": false
   #"style/layout/max_height": 30
   #"style/layout/min_height": 30
-  "style/layout/margin_x": 0
-  "style/layout/margin_y": 0
+  #"style/layout/round_corner": 5
+  "style/layout/margin_x": 5
+  "style/layout/margin_y": 5
   "style/layout/border_width": 0
   "style/layout/min_width": 120
   "style/layout/corner_radius": 5              # 候选框外窗口圆角半径
