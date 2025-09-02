@@ -5,19 +5,23 @@ patch:
     horizontal: true                    # 候选词横排显示
     vertical_text: false
     fullscreen: false
+    display_tray_icon: false
     layout:
       #max_height: 30
       #min_height: 30
       round_corner: 5
-      margin_x: 5
-      margin_y: 5
+      margin_x: 0
+      margin_y: 0
       border_width: 0
-      min_width: 120
+      #min_width: 120
       corner_radius: 5                  # 候选框外窗口圆角半径
       shadow_radius: 4                  #全局阴影模糊半径，如果为0则全局禁用阴影
       shadow_offset_x: 0                # 阴影x偏置，正向右负向左
       shadow_offset_y: 3                # 阴影y偏置，如果x，y都是0,而shadow_radius不为0，则四周绘制阴影；否则drowshadow阴影
-    font_point: 12
+      hilite_padding: 6
+      hilite_spacing: 2
+      spacing: 10
+    font_point: 13
     inline_preedit: true                # 核心开关，强制将拼音显示在输入框内，而非悬浮候选窗
     preedit_type: composition
     #inline_preedit_color: 0x888888     # 拼音颜色（灰色）
