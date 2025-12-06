@@ -9,3 +9,10 @@ patch:
     - {schema: luna_pinyin_simp}
     - {schema: luna_pinyin_fluency}
     - {schema: wubi86_jidian}
+    - {schema: wubi86_jidian_pinyin}
+  switcher/save_options:
+    - ascii_mode
+    
+# patch:
+#   switcher/save_options:
+#     - ascii_mode
